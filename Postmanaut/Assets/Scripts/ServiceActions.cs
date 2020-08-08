@@ -26,7 +26,7 @@ public class ServiceActions : MonoBehaviour
             string endpointUrl = signalRHubUrl.Replace(hubName, connectionId);
 
             input.DisplayMessage(endpointUrl);
-            Debug.Log(e.Message);
+            Debug.Log(endpointUrl);
         };
 
         srLib.MessageReceived += (object sender, MessageEventArgs e) =>
