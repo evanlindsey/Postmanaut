@@ -11,7 +11,7 @@
   <script src="Build/UnityLoader.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@microsoft/signalr@3.1.2/dist/browser/signalr.min.js"></script>
   <script>
-    var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Build.json", { onProgress: UnityProgress });
+    var unityInstance = UnityLoader.instantiate("unityContainer", "Build/docs.json", { onProgress: UnityProgress });
   </script>
 </head>
 
@@ -21,7 +21,12 @@
     <div class="footer">
       <div class="webgl-logo"></div>
       <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-      <div class="title">Postmanaut</div>
+      <div class="title">
+        <b>Postmanaut&nbsp;</b>
+        <a href="https://github.com/evanlindsey/Postmanaut" target="_blank">
+          <img src="TemplateData/github.png" />
+        </a>
+      </div>
     </div>
   </div>
 </body>

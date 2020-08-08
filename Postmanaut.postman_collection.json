@@ -1,0 +1,414 @@
+{
+	"info": {
+		"_postman_id": "a4c34acf-d5ee-4179-b0f0-af12213ebfe0",
+		"name": "Postmanaut",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List Commands",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://postmanaut.herokuapp.com/ls",
+					"protocol": "https",
+					"host": [
+						"postmanaut",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"ls"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Move Forward",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e3b8289f-1ee6-4948-96bf-64a1b0185b5b",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"perform\": \"move\",\r\n    \"direction\": \"forward\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
+					"protocol": "https",
+					"host": [
+						"postmanaut",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"{{connectionId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Move Back",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"perform\": \"move\",\r\n    \"direction\": \"back\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
+					"protocol": "https",
+					"host": [
+						"postmanaut",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"{{connectionId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Move Left",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"perform\": \"move\",\r\n    \"direction\": \"left\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
+					"protocol": "https",
+					"host": [
+						"postmanaut",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"{{connectionId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Move Right",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"perform\": \"move\",\r\n    \"direction\": \"right\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
+					"protocol": "https",
+					"host": [
+						"postmanaut",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"{{connectionId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Flip Forward",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"perform\": \"flip\",\r\n    \"direction\": \"forward\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
+					"protocol": "https",
+					"host": [
+						"postmanaut",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"{{connectionId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Flip Back",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"perform\": \"flip\",\r\n    \"direction\": \"back\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
+					"protocol": "https",
+					"host": [
+						"postmanaut",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"{{connectionId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Flip Left",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"perform\": \"flip\",\r\n    \"direction\": \"left\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
+					"protocol": "https",
+					"host": [
+						"postmanaut",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"{{connectionId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Flip Right",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"perform\": \"flip\",\r\n    \"direction\": \"right\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
+					"protocol": "https",
+					"host": [
+						"postmanaut",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"{{connectionId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stop Forward",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"perform\": \"stop\",\r\n    \"direction\": \"forward\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
+					"protocol": "https",
+					"host": [
+						"postmanaut",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"{{connectionId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stop Back",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"perform\": \"stop\",\r\n    \"direction\": \"back\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
+					"protocol": "https",
+					"host": [
+						"postmanaut",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"{{connectionId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stop Left",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"perform\": \"stop\",\r\n    \"direction\": \"left\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
+					"protocol": "https",
+					"host": [
+						"postmanaut",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"{{connectionId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stop Right",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"perform\": \"stop\",\r\n    \"direction\": \"right\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
+					"protocol": "https",
+					"host": [
+						"postmanaut",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"{{connectionId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "409cc153-5806-45ad-8e7d-b77be354c12d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "214f71c7-068d-43d4-b4a0-306043137c9d",
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});"
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
