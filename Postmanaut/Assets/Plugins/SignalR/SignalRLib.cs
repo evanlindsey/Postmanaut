@@ -54,9 +54,9 @@ public class SignalRLib
     private static extern void Invoke(string method, string message);
 
     [MonoPInvokeCallback(typeof(Action<string>))]
-    public static void ConnectionCallback(string message)
+    public static void ConnectionCallback(string connectionId)
     {
-        OnConnectionStarted(message);
+        OnConnectionStarted(connectionId);
     }
 
     [MonoPInvokeCallback(typeof(Action<string>))]
@@ -77,8 +77,15 @@ public class SignalRLib
 
 #endif
 
+    public event EventHandler<ConnectionEventArgs> ConnectionStarted;
     public event EventHandler<MessageEventArgs> MessageReceived;
-    public event EventHandler<MessageEventArgs> ConnectionStarted;
+
+    private static void OnConnectionStarted(string connectionId)
+    {
+        var args = new ConnectionEventArgs();
+        args.ConnectionId = connectionId;
+        instance.ConnectionStarted?.Invoke(instance, args);
+    }
 
     private static void OnMessageReceived(string message)
     {
@@ -87,13 +94,11 @@ public class SignalRLib
         instance.MessageReceived?.Invoke(instance, args);
     }
 
-    private static void OnConnectionStarted(string message)
-    {
-        var args = new MessageEventArgs();
-        args.Message = message;
-        instance.ConnectionStarted?.Invoke(instance, args);
-    }
+}
 
+public class ConnectionEventArgs : EventArgs
+{
+    public string ConnectionId { get; set; }
 }
 
 public class MessageEventArgs : EventArgs

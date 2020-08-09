@@ -1,6 +1,6 @@
 # Postmanaut - WebGL
 
-## Control the Postmanaut in real-time using Postman!
+### Control the Postmanaut in real-time using Postman!
 
 ### https://www.evanlindsey.net/Postmanaut
 
@@ -16,7 +16,7 @@ Import the collection in Postman:
 
 ![Import](./Screenshots/import.png)
 
-Take the Connection ID from the URL (displayed in the game) and add it as an environment variable in Postman:
+Take the Connection ID from the URL (displayed in the game) and add it as the environment variable 'connectionId' in Postman:
 
 ![URL](./Screenshots/url.png)
 

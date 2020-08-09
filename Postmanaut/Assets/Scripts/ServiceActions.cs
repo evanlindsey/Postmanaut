@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public class ServiceActions : MonoBehaviour
@@ -19,11 +21,10 @@ public class ServiceActions : MonoBehaviour
         srLib = new SignalRLib();
         srLib.Init(signalRHubUrl, hubListenerName);
 
-        srLib.ConnectionStarted += (object sender, MessageEventArgs e) =>
+        srLib.ConnectionStarted += (object sender, ConnectionEventArgs e) =>
         {
-            string connectionId = e.Message;
             string hubName = signalRHubUrl.Split('/').Last();
-            string endpointUrl = signalRHubUrl.Replace(hubName, connectionId);
+            string endpointUrl = signalRHubUrl.Replace(hubName, e.ConnectionId);
 
             input.DisplayMessage(endpointUrl);
             Debug.Log(endpointUrl);
@@ -31,13 +32,19 @@ public class ServiceActions : MonoBehaviour
 
         srLib.MessageReceived += (object sender, MessageEventArgs e) =>
         {
-            string[] command = e.Message.Split(',');
-            string perform = command[0];
-            string direction = command[1];
+            ActionCommand action = new ActionCommand();
+            action = JsonUtility.FromJson<ActionCommand>(e.Message);
 
-            player.PerformAction(perform);
-            player.TurnDirection(direction);
+            player.PerformAction(action.perform);
+            player.TurnDirection(action.direction);
         };
+    }
+
+    [Serializable]
+    public class ActionCommand
+    {
+        public string perform;
+        public string direction;
     }
 
 }

@@ -477,6 +477,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5081275853845219318, guid: 1d1b8a217c5cf024ca6dbffeacc8f8bf,
+        type: 3}
+      propertyPath: signalRHubUrl
+      value: https://postmanaut.herokuapp.com/ActionHub
+      objectReference: {fileID: 0}
     - target: {fileID: 731180475687898660, guid: 1d1b8a217c5cf024ca6dbffeacc8f8bf,
         type: 3}
       propertyPath: m_LocalPosition.x
