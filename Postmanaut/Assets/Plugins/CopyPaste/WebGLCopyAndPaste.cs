@@ -39,10 +39,10 @@ public class WebGLCopyAndPasteAPI
 
 #if UNITY_WEBGL
 
-        [DllImport("__Internal")]
-        private static extern void initWebGLCopyAndPaste(string objectName, string cutCopyCallbackFuncName, string pasteCallbackFuncName);
-        [DllImport("__Internal")]
-        private static extern void passCopyToBrowser(string str);
+    [DllImport("__Internal")]
+    private static extern void initWebGLCopyAndPaste(string objectName, string cutCopyCallbackFuncName, string pasteCallbackFuncName);
+    [DllImport("__Internal")]
+    private static extern void passCopyToBrowser(string str);
 
 #endif
 
@@ -50,7 +50,7 @@ public class WebGLCopyAndPasteAPI
     {
 #if UNITY_WEBGL
 
-            initWebGLCopyAndPaste(objectName, cutCopyCallbackFuncName, pasteCallbackFuncName);
+        initWebGLCopyAndPaste(objectName, cutCopyCallbackFuncName, pasteCallbackFuncName);
 
 #endif
     }
@@ -59,7 +59,7 @@ public class WebGLCopyAndPasteAPI
     {
 #if UNITY_WEBGL
 
-            passCopyToBrowser(str);
+        passCopyToBrowser(str);
 
 #endif
     }

@@ -1,7 +1,10 @@
 .vscode
+.vs
+*.csproj
+*.sln
+bin
+obj
 Library
 Logs
 Packages
 Temp
-*.csproj
-*.sln

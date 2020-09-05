@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Text.RegularExpressions;
+﻿using System.Linq;
 using UnityEngine;
 
 public class ServiceActions : MonoBehaviour
@@ -10,13 +8,15 @@ public class ServiceActions : MonoBehaviour
     public string hubListenerName = "ReceiveAction";
 
     private PlayerControl player;
-    private InputText input;
+    private EndpointBar endpoint;
+    private ActionsLog actions;
     private SignalRLib srLib;
 
     void Start()
     {
         player = GameObject.Find("Postmanaut").GetComponent<PlayerControl>();
-        input = GameObject.Find("InputField").GetComponent<InputText>();
+        endpoint = GameObject.Find("EndpointBar").GetComponent<EndpointBar>();
+        actions = GameObject.Find("ActionsLog").GetComponent<ActionsLog>();
 
         srLib = new SignalRLib();
         srLib.Init(signalRHubUrl, hubListenerName);
@@ -26,8 +26,8 @@ public class ServiceActions : MonoBehaviour
             string hubName = signalRHubUrl.Split('/').Last();
             string endpointUrl = signalRHubUrl.Replace(hubName, e.ConnectionId);
 
-            input.DisplayMessage(endpointUrl);
             Debug.Log(endpointUrl);
+            endpoint.UpdateURL(endpointUrl);
         };
 
         srLib.MessageReceived += (object sender, MessageEventArgs e) =>
@@ -37,14 +37,9 @@ public class ServiceActions : MonoBehaviour
 
             player.PerformAction(action.perform);
             player.TurnDirection(action.direction);
-        };
-    }
 
-    [Serializable]
-    public class ActionCommand
-    {
-        public string perform;
-        public string direction;
+            actions.AddEntry(action);
+        };
     }
 
 }

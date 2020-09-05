@@ -44,7 +44,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"perform\": \"move\",\r\n    \"direction\": \"forward\"\r\n}",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"move\",\r\n    \"direction\": \"forward\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -73,7 +73,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"perform\": \"move\",\r\n    \"direction\": \"back\"\r\n}",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"move\",\r\n    \"direction\": \"back\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -102,7 +102,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"perform\": \"move\",\r\n    \"direction\": \"left\"\r\n}",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"move\",\r\n    \"direction\": \"left\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -131,7 +131,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"perform\": \"move\",\r\n    \"direction\": \"right\"\r\n}",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"move\",\r\n    \"direction\": \"right\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -160,7 +160,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"perform\": \"flip\",\r\n    \"direction\": \"forward\"\r\n}",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"flip\",\r\n    \"direction\": \"forward\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -189,7 +189,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"perform\": \"flip\",\r\n    \"direction\": \"back\"\r\n}",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"flip\",\r\n    \"direction\": \"back\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -218,7 +218,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"perform\": \"flip\",\r\n    \"direction\": \"left\"\r\n}",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"flip\",\r\n    \"direction\": \"left\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -247,7 +247,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"perform\": \"flip\",\r\n    \"direction\": \"right\"\r\n}",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"flip\",\r\n    \"direction\": \"right\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -276,7 +276,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"perform\": \"stop\",\r\n    \"direction\": \"forward\"\r\n}",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"stop\",\r\n    \"direction\": \"forward\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -305,7 +305,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"perform\": \"stop\",\r\n    \"direction\": \"back\"\r\n}",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"stop\",\r\n    \"direction\": \"back\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -334,7 +334,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"perform\": \"stop\",\r\n    \"direction\": \"left\"\r\n}",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"stop\",\r\n    \"direction\": \"left\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -363,7 +363,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"perform\": \"stop\",\r\n    \"direction\": \"right\"\r\n}",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"stop\",\r\n    \"direction\": \"right\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
