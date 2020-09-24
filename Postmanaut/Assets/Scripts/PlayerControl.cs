@@ -19,6 +19,7 @@ public class PlayerControl : MonoBehaviour
 
     private Vector3 movement;
     private float rotation;
+    private float speed;
 
     private Animator anim;
     private CharacterController controller;
@@ -35,6 +36,7 @@ public class PlayerControl : MonoBehaviour
 
         movement = Vector3.zero;
         rotation = forward;
+        speed = 0;
 
         anim = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
@@ -43,8 +45,7 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         // Movement
-        float moveSpeed = (anim.GetBool("run") ? runSpeed : (anim.GetBool("walk") ? walkSpeed : 0));
-        movement = transform.forward * moveSpeed;
+        movement = transform.forward * speed;
         controller.Move(movement * Time.deltaTime);
         movement.y -= gravity * Time.deltaTime;
 
@@ -65,14 +66,17 @@ public class PlayerControl : MonoBehaviour
             case "idle":
                 anim.SetBool("walk", false);
                 anim.SetBool("run", false);
+                speed = 0;
                 break;
             case "walk":
                 anim.SetBool("run", false);
                 anim.SetBool("walk", true);
+                speed = walkSpeed;
                 break;
             case "run":
                 anim.SetBool("walk", false);
                 anim.SetBool("run", true);
+                speed = runSpeed;
                 break;
             case "flip":
                 anim.Play(action);
