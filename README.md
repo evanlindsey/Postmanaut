@@ -16,11 +16,11 @@ Import the collection in Postman:
 
 ![Import](./Screenshots/import.png)
 
-Take the Connection ID from the endpoint URL (displayed in the game).
+Copy the Endpoint URL displayed in the game:
 
 ![URL](./Screenshots/url.png)
 
-Add the ```connectionId``` and ```userName``` environment variables in Postman:
+Add the ```endpoint``` and ```userName``` environment variables in Postman:
 
 ![Environment](./Screenshots/environment.png)
 

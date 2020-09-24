@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 731180475687898660}
-  - component: {fileID: -5081275853845219318}
+  - component: {fileID: 4600528512033229979}
   m_Layer: 0
   m_Name: Actions
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-5081275853845219318
+--- !u!114 &4600528512033229979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,5 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 938aa54feb0707b418d78878c248314d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  signalRHubUrl: http://localhost:5000/ActionHub
+  signalRHubUrl: https://postmanaut.herokuapp.com/ActionHub
   hubListenerName: ReceiveAction

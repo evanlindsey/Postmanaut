@@ -4,7 +4,7 @@ using UnityEngine;
 public class ServiceActions : MonoBehaviour
 {
 
-    public string signalRHubUrl = "http://localhost:5000/ActionHub";
+    public string signalRHubUrl = "https://postmanaut.herokuapp.com/ActionHub";
     public string hubListenerName = "ReceiveAction";
 
     private PlayerControl player;
@@ -35,8 +35,11 @@ public class ServiceActions : MonoBehaviour
             ActionCommand action = new ActionCommand();
             action = JsonUtility.FromJson<ActionCommand>(e.Message);
 
-            player.PerformAction(action.perform);
-            player.TurnDirection(action.direction);
+            if (!string.IsNullOrEmpty(action.direction))
+                player.SetDirection(action.direction);
+
+            if (!string.IsNullOrEmpty(action.perform))
+                player.PerformAction(action.perform);
 
             actions.AddEntry(action);
         };

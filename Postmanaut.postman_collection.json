@@ -6,27 +6,358 @@
 	},
 	"item": [
 		{
-			"name": "List Commands",
+			"name": "Ping",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://postmanaut.herokuapp.com/ls",
-					"protocol": "https",
+					"raw": "{{endpoint}}",
 					"host": [
-						"postmanaut",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"ls"
+						"{{endpoint}}"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Move Forward",
+			"name": "Idle",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c74f8967-8bdb-4beb-bf57-6f99e4054612",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"idle\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}",
+					"host": [
+						"{{endpoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Turn Forward",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "871c8cf9-e5fc-4589-9c7f-5796470a1558",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"direction\": \"forward\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}",
+					"host": [
+						"{{endpoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Turn Back",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5bcb39e8-a5a8-4b89-a2c0-8a28375cb171",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"direction\": \"back\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}",
+					"host": [
+						"{{endpoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Turn Left",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ed815c92-5a9c-4ec2-8f7a-a15d9c9f56b6",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"direction\": \"left\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}",
+					"host": [
+						"{{endpoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Turn Right",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a400f2d2-1d8f-4382-830c-69e0d2737b80",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"direction\": \"right\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}",
+					"host": [
+						"{{endpoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Walk",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "15400aef-9fb8-4d48-8bdc-ce6f7a86a778",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"walk\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}",
+					"host": [
+						"{{endpoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Walk Forward",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a3daee85-ff41-47e9-b880-589036c518fc",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"walk\",\r\n    \"direction\": \"forward\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}",
+					"host": [
+						"{{endpoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Walk Back",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"walk\",\r\n    \"direction\": \"back\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}",
+					"host": [
+						"{{endpoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Walk Left",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"walk\",\r\n    \"direction\": \"left\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}",
+					"host": [
+						"{{endpoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Walk Right",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"walk\",\r\n    \"direction\": \"right\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}",
+					"host": [
+						"{{endpoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Run",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"run\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}",
+					"host": [
+						"{{endpoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Run Forward",
 			"event": [
 				{
 					"listen": "test",
@@ -44,7 +375,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"move\",\r\n    \"direction\": \"forward\"\r\n}",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"run\",\r\n    \"direction\": \"forward\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -52,28 +383,22 @@
 					}
 				},
 				"url": {
-					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
-					"protocol": "https",
+					"raw": "{{endpoint}}",
 					"host": [
-						"postmanaut",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"{{connectionId}}"
+						"{{endpoint}}"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Move Back",
+			"name": "Run Back",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"move\",\r\n    \"direction\": \"back\"\r\n}",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"run\",\r\n    \"direction\": \"back\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -81,28 +406,22 @@
 					}
 				},
 				"url": {
-					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
-					"protocol": "https",
+					"raw": "{{endpoint}}",
 					"host": [
-						"postmanaut",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"{{connectionId}}"
+						"{{endpoint}}"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Move Left",
+			"name": "Run Left",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"move\",\r\n    \"direction\": \"left\"\r\n}",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"run\",\r\n    \"direction\": \"left\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -110,28 +429,22 @@
 					}
 				},
 				"url": {
-					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
-					"protocol": "https",
+					"raw": "{{endpoint}}",
 					"host": [
-						"postmanaut",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"{{connectionId}}"
+						"{{endpoint}}"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Move Right",
+			"name": "Run Right",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"move\",\r\n    \"direction\": \"right\"\r\n}",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"run\",\r\n    \"direction\": \"right\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -139,15 +452,32 @@
 					}
 				},
 				"url": {
-					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
-					"protocol": "https",
+					"raw": "{{endpoint}}",
 					"host": [
-						"postmanaut",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"{{connectionId}}"
+						"{{endpoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Flip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"flip\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{endpoint}}",
+					"host": [
+						"{{endpoint}}"
 					]
 				}
 			},
@@ -168,15 +498,9 @@
 					}
 				},
 				"url": {
-					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
-					"protocol": "https",
+					"raw": "{{endpoint}}",
 					"host": [
-						"postmanaut",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"{{connectionId}}"
+						"{{endpoint}}"
 					]
 				}
 			},
@@ -197,15 +521,9 @@
 					}
 				},
 				"url": {
-					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
-					"protocol": "https",
+					"raw": "{{endpoint}}",
 					"host": [
-						"postmanaut",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"{{connectionId}}"
+						"{{endpoint}}"
 					]
 				}
 			},
@@ -226,15 +544,9 @@
 					}
 				},
 				"url": {
-					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
-					"protocol": "https",
+					"raw": "{{endpoint}}",
 					"host": [
-						"postmanaut",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"{{connectionId}}"
+						"{{endpoint}}"
 					]
 				}
 			},
@@ -255,131 +567,9 @@
 					}
 				},
 				"url": {
-					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
-					"protocol": "https",
+					"raw": "{{endpoint}}",
 					"host": [
-						"postmanaut",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"{{connectionId}}"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Stop Forward",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"stop\",\r\n    \"direction\": \"forward\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
-					"protocol": "https",
-					"host": [
-						"postmanaut",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"{{connectionId}}"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Stop Back",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"stop\",\r\n    \"direction\": \"back\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
-					"protocol": "https",
-					"host": [
-						"postmanaut",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"{{connectionId}}"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Stop Left",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"stop\",\r\n    \"direction\": \"left\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
-					"protocol": "https",
-					"host": [
-						"postmanaut",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"{{connectionId}}"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Stop Right",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"user\": \"{{userName}}\",\r\n    \"perform\": \"stop\",\r\n    \"direction\": \"right\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://postmanaut.herokuapp.com/{{connectionId}}",
-					"protocol": "https",
-					"host": [
-						"postmanaut",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"{{connectionId}}"
+						"{{endpoint}}"
 					]
 				}
 			},
