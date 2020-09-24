@@ -13,7 +13,10 @@ public class ActionsLog : MonoBehaviour
 
     public void AddEntry(ActionCommand action)
     {
-        uiText.text += $"\n{action.user} Performed:\n{action.perform} - {action.direction}\n";
+        uiText.text +=
+            $"User: {action.user}\n" +
+            $"Perform: {action.perform}\n" +
+            $"Direction: {action.direction}\n\n";
     }
 
 }
