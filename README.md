@@ -10,7 +10,7 @@
 
 Get the latest version of Postman [HERE](https://www.postman.com/downloads/).
 
-The collection of API calls is available [HERE](https://github.com/evanlindsey/Postmanaut/blob/master/Postmanaut.postman_collection.json).
+The collection of API calls is available [HERE](https://raw.githubusercontent.com/evanlindsey/Postmanaut/master/Postmanaut.postman_collection.json).
 
 Import the collection in Postman:
 
